@@ -177,7 +177,6 @@ def test_backstage_pass_after_sell_date():
     assert 0 == gilded_rose.quality
     assert -11 == gilded_rose.days_remaining
 
-@pytest.mark.skipif(True, reason='not implemented')
 def test_conjured_item_before_sell_date():
     gilded_rose = GildedRose("Conjured Mana Cake", 10, 5)
     gilded_rose.tick()
@@ -185,15 +184,13 @@ def test_conjured_item_before_sell_date():
     assert 8 == gilded_rose.quality
     assert 4 == gilded_rose.days_remaining
 
-@pytest.mark.skipif(True, reason='not implemented')
 def test_conjured_item_at_zero_quality():
     gilded_rose = GildedRose("Conjured Mana Cake", 0, 5)
     gilded_rose.tick()
 
-    assert 8 == gilded_rose.quality
+    assert 0 == gilded_rose.quality
     assert 4 == gilded_rose.days_remaining
 
-@pytest.mark.skipif(True, reason='not implemented')
 def test_conjured_item_on_sell_date():
     gilded_rose = GildedRose("Conjured Mana Cake", 10, 0)
     gilded_rose.tick()
@@ -201,7 +198,6 @@ def test_conjured_item_on_sell_date():
     assert 6 == gilded_rose.quality
     assert -1 == gilded_rose.days_remaining
 
-@pytest.mark.skipif(True, reason='not implemented')
 def test_conjured_item_on_sell_date_at_zero_quality():
     gilded_rose = GildedRose("Conjured Mana Cake", 0, 0)
     gilded_rose.tick()
@@ -209,7 +205,6 @@ def test_conjured_item_on_sell_date_at_zero_quality():
     assert 0 == gilded_rose.quality
     assert -1 == gilded_rose.days_remaining
 
-@pytest.mark.skipif(True, reason='not implemented')
 def test_conjured_item_after_sell_date():
     gilded_rose = GildedRose("Conjured Mana Cake", 10, -10)
     gilded_rose.tick()
@@ -217,7 +212,6 @@ def test_conjured_item_after_sell_date():
     assert 6 == gilded_rose.quality
     assert -11 == gilded_rose.days_remaining
 
-@pytest.mark.skipif(True, reason='not implemented')
 def test_conjured_item_after_sell_date_at_zero_quality():
     gilded_rose = GildedRose("Conjured Mana Cake", 0, -10)
     gilded_rose.tick()
